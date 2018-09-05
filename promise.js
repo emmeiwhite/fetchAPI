@@ -3,7 +3,8 @@
 
 const promise = fetch('https://jsonplaceholder.typicode.com/posts').
 then(function(res){
-    return res.json();
+    // console.log(res); This here is again a promise, so we have to return it and use another then to get the data
+    return res.json(); // We are returning a Promise again which will now be resolved for the data
 }).then(data => {
     console.log(data)
 })
